@@ -1,0 +1,19 @@
+{
+    "scenes": [
+        {
+            "name": "attractMode"
+        },
+        {
+            "name": "titleScreen"
+        },
+        {
+            "name": "game"
+        },
+        {
+            "name": "pause"
+        },
+        {
+            "name": "ending"
+        }
+    ]
+}
