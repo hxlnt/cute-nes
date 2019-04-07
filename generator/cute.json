@@ -1,4 +1,5 @@
 {
+    "project": "demo",
     "scenes": [
         {
             "name": "attractMode"

@@ -12,6 +12,7 @@ const fs = require('fs');
 const contents = fs.readFileSync("../../generator/cute.json");
 const jsonContent = JSON.parse(contents);
 console.log(jsonContent.scenes[0].name);
+const projectName = jsonContent.scenes.project;
 function ensureDir(dirpath) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
@@ -27,7 +28,7 @@ function main() {
     return __awaiter(this, void 0, void 0, function* () {
         for (let i = 0; i < jsonContent.scenes.length; i++) {
             try {
-                yield ensureDir('../' + jsonContent.scenes[i].name + '/');
+                yield ensureDir('../' + projectName + '/' + jsonContent.scenes[i].name + '/');
                 console.log('Directory created');
             }
             catch (err) {
