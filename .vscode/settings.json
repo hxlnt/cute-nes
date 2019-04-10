@@ -1,0 +1,29 @@
+{
+    "todo.archive.name": "Done",
+    "todo.colors.cancelled": "#e54545",
+    "todo.colors.done": "#aeaeae",
+    "todo.colors.project": "#ae81ff",
+    "todo.colors.tags.background": [
+        "#8181ff",
+        "#e58545",
+        "#e54545",
+        "#45ae81",
+        "#aeae45"
+    ],
+    "todo.tags.names": [
+        "bfix",
+        "code",
+        "docs",
+        "test",
+        "tool"
+    ],
+    "todo.colors.tags.foreground": [
+        "#000000",
+        "#000000",
+        "#000000",
+        "#000000",
+        "#000000"
+      ],
+    "todo.archive.project.enabled": false,
+    "todo.archive.sortByDate": true
+}
