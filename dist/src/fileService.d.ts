@@ -1,7 +1,11 @@
 export default class fileService {
-    private jsonPath;
-    constructor(jsonPath: string);
-    static createDir(path: string): Promise<void>;
-    mainbla(): Promise<any>;
+    readFile(jsonFilePath: string): any;
+}
+export interface cuteJson {
+    project: string;
+    scenes: [cuteScenes];
+}
+export interface cuteScenes {
+    name: string;
 }
 //# sourceMappingURL=fileService.d.ts.map
