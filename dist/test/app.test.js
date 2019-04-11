@@ -14,16 +14,12 @@ describe('readFile', () => {
         assert.throws(() => { testFileService.readFile('test/data/malformed.json'); }, Error);
     });
 });
-// describe('CreateProject', () => {
-//   const testJsonPath = 'test/data/test.json';
-//   const testFileService = new FileService(testJsonPath);
 describe('CreateProjectFolders', () => {
     it('should create folders for the project', () => {
         const projectName = result.project;
-        console.log(projectName);
-        for (let i = 0; i < result.scenes.length; i++) {
+        for (let scene of result.scenes) {
             try {
-                fileService_1.default.createDir(projectName + '/' + result.scenes[i].name + '/');
+                fileService_1.default.createDir(projectName + '/' + scene.name + '/');
             }
             catch (err) {
                 console.error(err);
@@ -34,6 +30,11 @@ describe('CreateProjectFolders', () => {
         assert.equal(fs.existsSync('demo/game'), true);
         assert.equal(fs.existsSync('demo/pause'), true);
         assert.equal(fs.existsSync('demo/ending'), true);
+    });
+    it('should not throw an error if folders already exist', () => {
+        const projectName = result.project;
+        assert.doesNotThrow(() => (fileService_1.default.createDir(projectName + '/' + result.scenes[0].name + '/'), Error));
+        assert.equal(fs.existsSync('demo/attractMode'), true);
     });
 });
 //# sourceMappingURL=app.test.js.map
