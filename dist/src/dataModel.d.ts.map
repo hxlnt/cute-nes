@@ -1,0 +1,1 @@
+{"version":3,"file":"dataModel.d.ts","sourceRoot":"","sources":["../../src/dataModel.ts"],"names":[],"mappings":"AACA,MAAM,WAAW,QAAQ;IACrB,OAAO,EAAE,MAAM,CAAC;IAChB,MAAM,EAAE,CAAC,UAAU,CAAC,CAAA;CACrB;AAED,MAAM,WAAW,UAAU;IACzB,IAAI,EAAE,MAAM,CAAA;CACb;AAED,qBAAa,OAAO;WACJ,UAAU,CAAC,IAAI,EAAE,MAAM,GAAG,QAAQ;CAGjD"}
