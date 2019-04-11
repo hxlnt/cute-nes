@@ -10,8 +10,7 @@ describe('readFile', () => {
     assert.equal(result.scenes[0].name, 'attractMode');
   });
   it('should fail if JSON is malformed.', () => {
-    //const result = testFileService.readFile('test/data/malformed.json');
-   // assert.throws( function() { testFileService.readFile('test/data/malformed.json') }, Error);
+    assert.throws( () => { testFileService.readFile('test/data/malformed.json'); }, Error);
   });
 });
 
@@ -51,9 +50,3 @@ describe('readFile', () => {
 // //         // const testIsFileCreated = testYamlService.CreateFile();
 // //         // assert.equal(testIsFileCreated, false);
 // //     });
-
-// //     it('should not create a new YAML file if one already exists', () => {
-// //         // const testIsFileCreated = testYamlService.CreateFile();
-// //         // assert.equal(testIsFileCreated, true);
-// //     });
-// // });

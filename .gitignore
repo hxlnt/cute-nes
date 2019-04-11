@@ -1,3 +1,4 @@
 node_modules
+tsconfig.tsbuildinfo
 .env
 .nyc_output
