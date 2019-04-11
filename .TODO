@@ -1,4 +1,8 @@
 cute-nes:
-    [] @test Write test to add folders from JSON
     [] @test Add palette to test JSON
     [] @test Write test to generate palette.dat from JSON
+    [] @code Write method to generate palette.dat from JSON
+
+Done:
+  [X] @test Write test to add folders from JSON
+  [X] @code Write method to add folders from JSON
