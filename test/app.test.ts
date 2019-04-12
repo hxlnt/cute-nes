@@ -16,15 +16,11 @@ describe('readFile', () => {
 });
 
 describe('CreateProjectFolders', () => {
-  it('should create folders for the project', () => {
+  it('should create folders for the project', async () => {
     const projectName = result.project;
     for (let scene of result.scenes) {
-        try {
-          FileService.createDir(projectName + '/' + scene.name + '/');
-        } catch (err) {
-          console.error(err);
-        }
-      }
+      await FileService.createDir(projectName + '/' + scene.name + '/');
+    }
     assert.equal(fs.existsSync('demo/attractMode'), true);
     assert.equal(fs.existsSync('demo/titleScreen'), true);
     assert.equal(fs.existsSync('demo/game'), true);
@@ -33,7 +29,7 @@ describe('CreateProjectFolders', () => {
   });
   it('should not throw an error if folders already exist', () => {
     const projectName = result.project;
-    assert.doesNotThrow( () => (FileService.createDir(projectName + '/' + result.scenes[0].name + '/'), Error) )
+    assert.doesNotThrow(() => (FileService.createDir(projectName + '/' + result.scenes[0].name + '/'), Error))
     assert.equal(fs.existsSync('demo/attractMode'), true);
   });
 });
