@@ -13,6 +13,7 @@ const fs = require("fs");
 const fileService_1 = require("../src/fileService");
 const testFileService = new fileService_1.default();
 const result = testFileService.readFile('test/data/test.json');
+const projectName = result.project;
 describe('readFile', () => {
     it('should read file and return JSON object.', () => {
         assert.equal(result.project, 'demo');
@@ -24,7 +25,6 @@ describe('readFile', () => {
 });
 describe('CreateProjectFolders', () => {
     it('should create folders for the project', () => __awaiter(this, void 0, void 0, function* () {
-        const projectName = result.project;
         for (let scene of result.scenes) {
             yield fileService_1.default.createDir(projectName + '/' + scene.name + '/');
         }
@@ -35,7 +35,6 @@ describe('CreateProjectFolders', () => {
         assert.equal(fs.existsSync('demo/ending'), true);
     }));
     it('should not throw an error if folders already exist', () => {
-        const projectName = result.project;
         assert.doesNotThrow(() => (fileService_1.default.createDir(projectName + '/' + result.scenes[0].name + '/'), Error));
         assert.equal(fs.existsSync('demo/attractMode'), true);
     });

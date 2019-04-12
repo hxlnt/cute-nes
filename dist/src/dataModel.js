@@ -89,6 +89,9 @@ function cast(val, typ) {
 function a(typ) {
     return { arrayItems: typ };
 }
+function u(...typs) {
+    return { unionMembers: typs };
+}
 function o(props, additional) {
     return { props, additional };
 }
@@ -102,6 +105,7 @@ const typeMap = {
     ], false),
     "Scene": o([
         { json: "name", js: "name", typ: "" },
+        { json: "backgroundColors", js: "backgroundColors", typ: u(undefined, a(0)) },
     ], false),
 };
 //# sourceMappingURL=dataModel.js.map

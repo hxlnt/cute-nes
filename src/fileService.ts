@@ -14,10 +14,8 @@ export default class fileService {
   public readFile(jsonFilePath: string): any {
     const jsonString: string = fs.readFileSync(jsonFilePath).toString();
     try {
-      const cuteJSON = Convert.toCuteJSON(jsonString);
-      return cuteJSON;
-    }
-    catch {
+      return Convert.toCuteJSON(jsonString);
+    } catch {
       throw new Error(`There\'s something wrong with the JSON file.`);
     }
   }

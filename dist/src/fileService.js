@@ -26,8 +26,7 @@ class fileService {
     readFile(jsonFilePath) {
         const jsonString = fs.readFileSync(jsonFilePath).toString();
         try {
-            const cuteJSON = dataModel_1.Convert.toCuteJSON(jsonString);
-            return cuteJSON;
+            return dataModel_1.Convert.toCuteJSON(jsonString);
         }
         catch (_a) {
             throw new Error(`There\'s something wrong with the JSON file.`);

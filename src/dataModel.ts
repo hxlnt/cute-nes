@@ -1,11 +1,12 @@
 
 export interface cuteJson {
-    project: string,
-    scenes: [cuteScenes]
+    project: string;
+    scenes: cuteScenes[];
 }
 
 export interface cuteScenes {
-    name: string
+    name: string;
+    backgroundColors?: number[];
 }
 
 export class Convert {
@@ -99,6 +100,10 @@ function a(typ: any) {
     return { arrayItems: typ };
 }
 
+function u(...typs: any[]) {
+    return { unionMembers: typs };
+}
+
 function o(props: any[], additional: any) {
     return { props, additional };
 }
@@ -114,5 +119,6 @@ const typeMap: any = {
     ], false),
     "Scene": o([
         { json: "name", js: "name", typ: "" },
+        { json: "backgroundColors", js: "backgroundColors", typ: u(undefined, a(0)) },
     ], false),
 };

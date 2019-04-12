@@ -4,6 +4,7 @@ import FileService from '../src/fileService';
 
 const testFileService = new FileService();
 const result = testFileService.readFile('test/data/test.json');
+const projectName = result.project;
 
 describe('readFile', () => {
   it('should read file and return JSON object.', () => {
@@ -17,7 +18,6 @@ describe('readFile', () => {
 
 describe('CreateProjectFolders', () => {
   it('should create folders for the project', async () => {
-    const projectName = result.project;
     for (let scene of result.scenes) {
       await FileService.createDir(projectName + '/' + scene.name + '/');
     }
@@ -28,8 +28,9 @@ describe('CreateProjectFolders', () => {
     assert.equal(fs.existsSync('demo/ending'), true);
   });
   it('should not throw an error if folders already exist', () => {
-    const projectName = result.project;
-    assert.doesNotThrow(() => (FileService.createDir(projectName + '/' + result.scenes[0].name + '/'), Error))
+    assert.doesNotThrow(() => (FileService.createDir(projectName + '/' + result.scenes[0].name + '/'), Error));
     assert.equal(fs.existsSync('demo/attractMode'), true);
   });
 });
+
+
