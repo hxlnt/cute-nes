@@ -1,7 +1,11 @@
 cute-nes:
-    [] @test Add palette to test JSON
-    [] @test Write test to generate palette.dat from JSON
-    [] @code Write method to generate palette.dat from JSON
+    [] @test Add palettes to test JSON
+    [] @code Write method to generate and save palette.dat from JSON
+    [] @test Write test to generate and save palette.dat from JSON
+    [] @code Write method to save blank .asms in scene folders and root folder
+    [] @test Write test to save blank .asms in scene folders and root folder
+    [] @code Write method to save default attribute table in scene folders
+    [] @test Write test to save default attribute table in scene folders
 
 Done:
   [X] @test Write test to add folders from JSON
