@@ -10,9 +10,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 const assert = require("assert");
 const fs = require("fs");
-const fileService_1 = require("../src/fileService");
+const fileService_1 = require("../fileService");
 const testFileService = new fileService_1.default();
-const result = testFileService.readFile('test/data/test.json');
+const result = testFileService.readFile('bin/test/data/test.json');
 const projectName = result.project;
 describe('readFile', () => {
     it('should read file and return JSON object.', () => {
@@ -20,7 +20,7 @@ describe('readFile', () => {
         assert.equal(result.scenes[0].name, 'attractMode');
     });
     it('should fail if JSON is malformed.', () => {
-        assert.throws(() => { testFileService.readFile('test/data/malformed.json'); }, Error);
+        assert.throws(() => { testFileService.readFile('bin/test/data/malformed.json'); }, Error);
     });
 });
 describe('CreateProjectFolders', () => {
@@ -39,4 +39,3 @@ describe('CreateProjectFolders', () => {
         assert.equal(fs.existsSync('demo/attractMode'), true);
     });
 });
-//# sourceMappingURL=app.test.js.map

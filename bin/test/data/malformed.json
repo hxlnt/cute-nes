@@ -1,0 +1,20 @@
+{
+    "project": "demo",
+    "spleens": [
+        {
+            "name": "attractMode"
+        },
+        {
+            "name": "titleScreen"
+        },
+        {
+            "name": "game"
+        },
+        {
+            "name": "pause"
+        },
+        {
+            "something_else": "ending"
+        }
+    ]
+}

@@ -1,9 +1,9 @@
 import assert = require('assert');
 import fs = require('fs');
-import FileService from '../src/fileService';
+import FileService from '../fileService';
 
 const testFileService = new FileService();
-const result = testFileService.readFile('test/data/test.json');
+const result = testFileService.readFile('bin/test/data/test.json');
 const projectName = result.project;
 
 describe('readFile', () => {
@@ -12,13 +12,13 @@ describe('readFile', () => {
     assert.equal(result.scenes[0].name, 'attractMode');
   });
   it('should fail if JSON is malformed.', () => {
-    assert.throws(() => { testFileService.readFile('test/data/malformed.json'); }, Error);
+    assert.throws(() => { testFileService.readFile('bin/test/data/malformed.json'); }, Error);
   });
 });
 
 describe('CreateProjectFolders', () => {
   it('should create folders for the project', async () => {
-    for (let scene of result.scenes) {
+    for (const scene of result.scenes) {
       await FileService.createDir(projectName + '/' + scene.name + '/');
     }
     assert.equal(fs.existsSync('demo/attractMode'), true);
