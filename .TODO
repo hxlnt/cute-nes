@@ -2,11 +2,13 @@ cute-nes is an experimental NES developer toolchain/scaffolding tool.
 #engineering lol let's chill~
 
 To do:
-    [] @code Write method to generate and save files from JSON
-    [] @test Write test to generate and save files from JSON
-    [] @tool Fix folder structure/tsconfig
+    [] @code Write method to generate and save text to file
+    [] @test Write test to generate and save text to file
+    [] @code Write method to save image buffer to file
+    [] @test Write test to save image buffer to file
 
 Done:
+  [X] @tool Fix folder structure/tsconfig
   [X] @tool Set up Travis CI/Coveralls
   [X] @code Write method to add folders from JSON
   [X] @test Write test to add folders from JSON

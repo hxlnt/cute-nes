@@ -19,17 +19,17 @@ describe('readFile', () => {
 describe('CreateProjectFolders', () => {
   it('should create folders for the project', async () => {
     for (const scene of result.scenes) {
-      await FileService.createDir(projectName + '/' + scene.name + '/');
+      await FileService.createDir('projects/' + projectName + '/' + scene.name + '/');
     }
-    assert.equal(fs.existsSync('demo/attractMode'), true);
-    assert.equal(fs.existsSync('demo/titleScreen'), true);
-    assert.equal(fs.existsSync('demo/game'), true);
-    assert.equal(fs.existsSync('demo/pause'), true);
-    assert.equal(fs.existsSync('demo/ending'), true);
+    assert.equal(fs.existsSync('projects/demo/attractMode'), true);
+    assert.equal(fs.existsSync('projects/demo/titleScreen'), true);
+    assert.equal(fs.existsSync('projects/demo/game'), true);
+    assert.equal(fs.existsSync('projects/demo/pause'), true);
+    assert.equal(fs.existsSync('projects/demo/ending'), true);
   });
   it('should not throw an error if folders already exist', () => {
     assert.doesNotThrow(() => (FileService.createDir(projectName + '/' + result.scenes[0].name + '/'), Error));
-    assert.equal(fs.existsSync('demo/attractMode'), true);
+    assert.equal(fs.existsSync('projects/demo/attractMode'), true);
   });
 });
 
