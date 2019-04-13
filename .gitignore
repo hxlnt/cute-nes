@@ -1,4 +1,5 @@
 node_modules
 tsconfig.tsbuildinfo
+bin/test
 .env
 .nyc_output

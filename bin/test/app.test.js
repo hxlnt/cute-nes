@@ -25,7 +25,7 @@ describe('readFile', () => {
 });
 describe('CreateProjectFolders', () => {
     it('should create folders for the project', () => __awaiter(this, void 0, void 0, function* () {
-        for (let scene of result.scenes) {
+        for (const scene of result.scenes) {
             yield fileService_1.default.createDir(projectName + '/' + scene.name + '/');
         }
         assert.equal(fs.existsSync('demo/attractMode'), true);
