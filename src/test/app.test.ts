@@ -18,7 +18,7 @@ describe('readFile', () => {
 
 describe('CreateProjectFolders', () => {
   it('should create folders for the project', async () => {
-    for (let scene of result.scenes) {
+    for (const scene of result.scenes) {
       await FileService.createDir(projectName + '/' + scene.name + '/');
     }
     assert.equal(fs.existsSync('demo/attractMode'), true);

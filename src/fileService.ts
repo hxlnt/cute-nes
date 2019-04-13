@@ -1,11 +1,11 @@
 const fs = require('fs');
-import { Convert } from "./dataModel"
+import { Convert } from './dataModel';
 
 export default class fileService {
 
   public static async createDir(path: string) {
     try {
-      await fs.promises.mkdir(path, { recursive: true })
+      await fs.promises.mkdir(path, { recursive: true });
     } catch (err) {
       if (err.code !== 'EEXIST') { throw err; }
     }
