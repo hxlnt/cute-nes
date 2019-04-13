@@ -108,4 +108,3 @@ const typeMap = {
         { json: "backgroundColors", js: "backgroundColors", typ: u(undefined, a(0)) },
     ], false),
 };
-//# sourceMappingURL=dataModel.js.map

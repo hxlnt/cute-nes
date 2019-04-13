@@ -1,0 +1,20 @@
+{
+    "project": "demo",
+    "scenes": [
+        {
+            "name": "attractMode"
+        },
+        {
+            "name": "titleScreen"
+        },
+        {
+            "name": "game"
+        },
+        {
+            "name": "pause"
+        },
+        {
+            "name": "ending"
+        }
+    ]
+}
