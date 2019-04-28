@@ -1,0 +1,34 @@
+{
+    "scenes": [
+        {
+            "name": "attractMode",
+            "timeInterval": 600,
+            "onAPress": "titleScreen",
+            "onBPress": "titleScreen",
+            "onStartPress": "titleScreen",
+            "onEndOfTimeInterval": "attractMode"
+        },
+        {
+            "name": "titleScreen",
+            "onAPress": "game",
+            "onBPress": "game",
+            "onStartPress": "game"            
+        },
+        {
+            "name": "game",
+            "timeInterval": 600,
+            "onStartPress": "pause",
+            "onEndOfTimeInterval": "ending"            
+        },
+        {
+            "name": "pause",
+            "onStartPress": "game"            
+        },
+        {
+            "name": "ending",
+            "onAPress": "attractMode",
+            "onBPress": "attractMode",
+            "onStartPress": "attractMode"         
+        }
+    ]
+}

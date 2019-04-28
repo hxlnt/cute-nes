@@ -4,9 +4,9 @@
     "license": "MIT",
     "main": "build/app.js",
     "scripts": {
-        "build": "tsc --build",
-        "lint": "tslint -p . --force --fix",
-        "test": "tsc --build && mocha dist/test/**/*.test.js",
+        "build": "tsc --build src",
+        "lint": "tslint -p src --force --fix",
+        "test": "tsc --build src && mocha bin/test/**/*.test.js",
         "coverage": "nyc npm test && nyc report",
         "coveralls": "nyc report --reporter=text-lcov | coveralls"
     },
